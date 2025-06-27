@@ -79,13 +79,37 @@ const InvoiceList = () => {
     setStatusFilter(filters.status || '')
   }
 
-  const handleAction = async (action, invoice) => {
+const handleAction = async (action, invoice) => {
     switch (action) {
       case 'view':
         navigate(`/invoices/edit/${invoice.Id}`)
         break
       case 'edit':
         navigate(`/invoices/edit/${invoice.Id}`)
+        break
+      case 'pdf':
+        try {
+          const pdfDoc = await invoiceService.generatePDF(invoice.Id)
+          pdfDoc.save(`invoice-${invoice.number}.pdf`)
+          toast.success('PDF downloaded successfully')
+        } catch (err) {
+          toast.error('Failed to generate PDF')
+          console.error('PDF generation error:', err)
+        }
+        break
+      case 'email':
+        try {
+          const client = clients.find(c => c.Id === invoice.clientId)
+          if (client) {
+            const result = await invoiceService.emailInvoice(invoice.Id, client.email)
+            toast.success(result.message)
+          } else {
+            toast.error('Client email not found')
+          }
+        } catch (err) {
+          toast.error('Failed to email invoice')
+          console.error('Email error:', err)
+        }
         break
       case 'delete':
         if (window.confirm('Are you sure you want to delete this invoice?')) {

@@ -71,7 +71,7 @@ const InvoiceTable = ({ invoices, onAction, loading = false }) => {
     }
   ]
 
-  const actions = [
+const actions = [
     {
       key: 'view',
       label: 'View',
@@ -82,6 +82,18 @@ const InvoiceTable = ({ invoices, onAction, loading = false }) => {
       key: 'edit',
       label: 'Edit',
       icon: 'Edit',
+      variant: 'ghost'
+    },
+    {
+      key: 'pdf',
+      label: 'Download PDF',
+      icon: 'Download',
+      variant: 'ghost'
+    },
+    {
+      key: 'email',
+      label: 'Email to Client',
+      icon: 'Mail',
       variant: 'ghost'
     },
     {

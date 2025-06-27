@@ -33,8 +33,10 @@ const InvoiceForm = () => {
 
   const [clients, setClients] = useState([])
   const [settings, setSettings] = useState(null)
-  const [loading, setLoading] = useState(true)
+const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
+  const [downloading, setDownloading] = useState(false)
+  const [emailing, setEmailing] = useState(false)
   const [error, setError] = useState('')
 
   const loadData = async () => {
@@ -169,9 +171,40 @@ const [clientsData, settingsData] = await Promise.all([
     } catch (err) {
       toast.error('Failed to update invoice status')
       console.error('Status update error:', err)
+console.error('Status update error:', err)
     }
   }
 
+  const handleDownloadPDF = async () => {
+    if (!isEditing) return
+    
+    try {
+      setDownloading(true)
+      const pdfDoc = await invoiceService.generatePDF(parseInt(id))
+      pdfDoc.save(`invoice-${invoice.number}.pdf`)
+      toast.success('PDF downloaded successfully')
+    } catch (err) {
+      toast.error('Failed to generate PDF')
+      console.error('PDF generation error:', err)
+    } finally {
+      setDownloading(false)
+    }
+  }
+
+  const handleEmailInvoice = async () => {
+    if (!isEditing || !selectedClient) return
+    
+    try {
+      setEmailing(true)
+      const result = await invoiceService.emailInvoice(parseInt(id), selectedClient.email)
+      toast.success(result.message)
+    } catch (err) {
+      toast.error('Failed to email invoice')
+      console.error('Email error:', err)
+    } finally {
+      setEmailing(false)
+    }
+  }
   if (loading) {
     return <Loading type="form" />
   }
@@ -199,7 +232,7 @@ const [clientsData, settingsData] = await Promise.all([
             {isEditing ? `Invoice ${invoice.number}` : 'Create a new invoice for your client'}
           </p>
         </div>
-        <div className="flex items-center space-x-3 mt-4 sm:mt-0">
+<div className="flex items-center space-x-3 mt-4 sm:mt-0">
           <Button
             variant="ghost"
             onClick={() => navigate('/invoices')}
@@ -208,6 +241,24 @@ const [clientsData, settingsData] = await Promise.all([
           </Button>
           {isEditing && (
             <div className="flex space-x-2">
+              <Button
+                variant="ghost"
+                onClick={handleDownloadPDF}
+                icon="Download"
+                loading={downloading}
+                size="sm"
+              >
+                Download PDF
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={handleEmailInvoice}
+                icon="Mail"
+                loading={emailing}
+                size="sm"
+              >
+                Email to Client
+              </Button>
               {invoice.status === 'draft' && (
                 <Button
                   variant="secondary"
