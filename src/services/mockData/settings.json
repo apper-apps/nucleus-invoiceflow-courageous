@@ -1,11 +1,37 @@
 {
-  "companyName": "InvoiceFlow Pro",
+"companyName": "InvoiceFlow Pro",
   "companyEmail": "hello@invoiceflow.com",
   "companyAddress": "123 Business Street\nSuite 100\nSan Francisco, CA 94105",
   "invoicePrefix": "INV-",
   "taxRate": 10,
   "currency": "USD",
   "darkMode": false,
+  "branding": {
+    "logo": null,
+    "primaryColor": "#3b82f6",
+    "secondaryColor": "#64748b",
+    "accentColor": "#10b981",
+    "headerStyle": "standard",
+    "footerStyle": "standard",
+    "selectedTemplate": "modern"
+  },
+  "templates": {
+    "modern": {
+      "name": "Modern",
+      "description": "Clean and contemporary design",
+      "preview": "/templates/modern-preview.png"
+    },
+    "classic": {
+      "name": "Classic",
+      "description": "Traditional business style",
+      "preview": "/templates/classic-preview.png"
+    },
+    "minimal": {
+      "name": "Minimal",
+      "description": "Simple and elegant",
+      "preview": "/templates/minimal-preview.png"
+    }
+  },
   "createdAt": "2024-01-01T00:00:00Z",
   "updatedAt": "2024-01-01T00:00:00Z"
 }

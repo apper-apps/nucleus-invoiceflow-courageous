@@ -42,13 +42,18 @@ const InvoiceForm = () => {
       setLoading(true)
       setError('')
       
-      const [clientsData, settingsData] = await Promise.all([
+const [clientsData, settingsData] = await Promise.all([
         clientService.getAll(),
         settingsService.get()
       ])
       
       setClients(clientsData)
       setSettings(settingsData)
+
+      // Apply brand colors if available
+      if (settingsData.branding?.primaryColor) {
+        document.documentElement.style.setProperty('--color-brand-500', settingsData.branding.primaryColor.replace('#', ''))
+      }
 
       if (isEditing) {
         const invoiceData = await invoiceService.getById(parseInt(id))
