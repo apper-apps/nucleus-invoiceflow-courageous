@@ -162,9 +162,15 @@ this.invoices.splice(index, 1)
       return {
         success: true,
         message: `Invoice ${invoice.number} emailed successfully to ${clientEmail}`
-      }
+}
     } catch (error) {
       throw new Error(`Failed to email invoice: ${error.message}`)
     }
   }
 }
+
+// Export both the class and a singleton instance
+const invoiceService = new InvoiceService()
+
+export { InvoiceService, invoiceService }
+export default invoiceService
