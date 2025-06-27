@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "name": "John Smith",
+    "email": "john.smith@techcorp.com",
+    "phone": "+1 (555) 123-4567",
+    "company": "TechCorp Solutions",
+    "address": "123 Technology Drive\nSan Francisco, CA 94105",
+    "createdAt": "2024-01-10T09:00:00Z",
+    "updatedAt": "2024-01-10T09:00:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Sarah Johnson",
+    "email": "sarah@innovatedesign.com",
+    "phone": "+1 (555) 234-5678",
+    "company": "Innovate Design Studio",
+    "address": "456 Creative Boulevard\nNew York, NY 10001",
+    "createdAt": "2024-01-12T14:30:00Z",
+    "updatedAt": "2024-01-12T14:30:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Michael Brown",
+    "email": "mike.brown@retailplus.com",
+    "phone": "+1 (555) 345-6789",
+    "company": "RetailPlus Inc.",
+    "address": "789 Commerce Street\nChicago, IL 60601",
+    "createdAt": "2024-01-15T11:15:00Z",
+    "updatedAt": "2024-01-15T11:15:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "Emily Davis",
+    "email": "emily.davis@startupventures.com",
+    "phone": "+1 (555) 456-7890",
+    "company": "Startup Ventures LLC",
+    "address": "321 Innovation Way\nAustin, TX 78701",
+    "createdAt": "2024-01-18T16:20:00Z",
+    "updatedAt": "2024-01-18T16:20:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "David Wilson",
+    "email": "david@healthtechsolutions.com",
+    "phone": "+1 (555) 567-8901",
+    "company": "HealthTech Solutions",
+    "address": "654 Medical Center Drive\nBoston, MA 02101",
+    "createdAt": "2024-01-22T10:45:00Z",
+    "updatedAt": "2024-01-22T10:45:00Z"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "Id": 1,
+    "number": "INV-0001",
+    "clientId": 1,
+    "date": "2024-01-15",
+    "dueDate": "2024-02-14",
+    "items": [
+      {
+        "description": "Web Development Services",
+        "quantity": 40,
+        "rate": 75,
+        "amount": 3000
+      },
+      {
+        "description": "UI/UX Design",
+        "quantity": 20,
+        "rate": 85,
+        "amount": 1700
+      }
+    ],
+    "subtotal": 4700,
+    "tax": 470,
+    "total": 5170,
+    "status": "paid",
+    "notes": "Thank you for your business!",
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-01-20T14:30:00Z"
+  },
+  {
+    "Id": 2,
+    "number": "INV-0002",
+    "clientId": 2,
+    "date": "2024-01-20",
+    "dueDate": "2024-02-19",
+    "items": [
+      {
+        "description": "Mobile App Development",
+        "quantity": 60,
+        "rate": 80,
+        "amount": 4800
+      }
+    ],
+    "subtotal": 4800,
+    "tax": 480,
+    "total": 5280,
+    "status": "sent",
+    "notes": "Payment due within 30 days.",
+    "createdAt": "2024-01-20T09:15:00Z",
+    "updatedAt": "2024-01-20T09:15:00Z"
+  },
+  {
+    "Id": 3,
+    "number": "INV-0003",
+    "clientId": 3,
+    "date": "2024-01-25",
+    "dueDate": "2024-02-24",
+    "items": [
+      {
+        "description": "SEO Optimization",
+        "quantity": 25,
+        "rate": 60,
+        "amount": 1500
+      },
+      {
+        "description": "Content Creation",
+        "quantity": 15,
+        "rate": 50,
+        "amount": 750
+      }
+    ],
+    "subtotal": 2250,
+    "tax": 225,
+    "total": 2475,
+    "status": "overdue",
+    "notes": "Please remit payment as soon as possible.",
+    "createdAt": "2024-01-25T11:30:00Z",
+    "updatedAt": "2024-02-25T16:45:00Z"
+  },
+  {
+    "Id": 4,
+    "number": "INV-0004",
+    "clientId": 1,
+    "date": "2024-02-01",
+    "dueDate": "2024-03-02",
+    "items": [
+      {
+        "description": "Website Maintenance",
+        "quantity": 10,
+        "rate": 65,
+        "amount": 650
+      }
+    ],
+    "subtotal": 650,
+    "tax": 65,
+    "total": 715,
+    "status": "draft",
+    "notes": "Monthly maintenance fee.",
+    "createdAt": "2024-02-01T08:00:00Z",
+    "updatedAt": "2024-02-01T08:00:00Z"
+  },
+  {
+    "Id": 5,
+    "number": "INV-0005",
+    "clientId": 4,
+    "date": "2024-02-05",
+    "dueDate": "2024-03-07",
+    "items": [
+      {
+        "description": "E-commerce Development",
+        "quantity": 80,
+        "rate": 90,
+        "amount": 7200
+      },
+      {
+        "description": "Payment Integration",
+        "quantity": 15,
+        "rate": 95,
+        "amount": 1425
+      }
+    ],
+    "subtotal": 8625,
+    "tax": 862.5,
+    "total": 9487.5,
+    "status": "sent",
+    "notes": "Includes payment gateway setup and testing.",
+    "createdAt": "2024-02-05T13:20:00Z",
+    "updatedAt": "2024-02-05T13:20:00Z"
+  },
+  {
+    "Id": 6,
+    "number": "INV-0006",
+    "clientId": 2,
+    "date": "2024-02-10",
+    "dueDate": "2024-03-12",
+    "items": [
+      {
+        "description": "Consulting Services",
+        "quantity": 12,
+        "rate": 120,
+        "amount": 1440
+      }
+    ],
+    "subtotal": 1440,
+    "tax": 144,
+    "total": 1584,
+    "status": "paid",
+    "notes": "Strategic planning consultation.",
+    "createdAt": "2024-02-10T15:45:00Z",
+    "updatedAt": "2024-02-15T10:30:00Z"
+  }
+]

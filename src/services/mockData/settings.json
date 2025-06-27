@@ -1,0 +1,11 @@
+{
+  "companyName": "InvoiceFlow Pro",
+  "companyEmail": "hello@invoiceflow.com",
+  "companyAddress": "123 Business Street\nSuite 100\nSan Francisco, CA 94105",
+  "invoicePrefix": "INV-",
+  "taxRate": 10,
+  "currency": "USD",
+  "darkMode": false,
+  "createdAt": "2024-01-01T00:00:00Z",
+  "updatedAt": "2024-01-01T00:00:00Z"
+}
